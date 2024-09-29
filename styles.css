@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #4caf50; /* Green background for the header */
+  background-color: #07f452; /* Green background for the header */
   color: #fff; /* White text color */
   padding: 20px;
   text-align: center;
@@ -71,6 +71,11 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #3e8e41;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
 }
 
 #recommended-crops {
