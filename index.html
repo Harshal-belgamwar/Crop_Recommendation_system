@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Crop Recommendation</title>
+   <link rel="stylesheet" href="static/style/styles.css">
+</head>
+<body>
+   <header>
+       <h1>Crop Recommendation</h1>
+   </header>
+   <main>
+       <section class="input-section">
+           <h2>Enter Your Details</h2>
+           <form id="crop-form" action="/predict" method="POST">
+               <label for="city">City: <span class="required">*</span></label>
+               <select id="city" name="city" required>
+                   <option value="Pune">Pune</option>
+                   <option value="Mumbai">Mumbai</option>
+                   <option value="Delhi">Delhi</option>
+                   <option value="Yavatmal">Yavatmal</option>
+               </select>
+
+               <label for="area">Area: <span class="required">*</span></label>
+               <select id="area" name="area" required>
+                   <option value="dhankawdi">Dhankawdi</option>
+                   <option value="katraj">Katraj</option>
+                   <option value="shivaji Nagar">Shivaji Nagar</option>
+                   <option value="Fateh Nagar">Fateh Nagar</option>
+                   <option value="Kanjhawala">Kanjhawala</option>
+               </select>
+
+               <label for="temp">Temperature (°C): <span class="required">*</span></label>
+               <input type="number" id="temp" name="temp" min="0" max="50" required>
+
+               <label for="grain">Grain: <span class="required">*</span></label>
+               <select id="grain" name="grain" required>
+                <option value="0">0(means no)</option>
+                <option value="1">1(means yes)</option>
+               </select>
+
+               <label for="vege">Vegetables: <span class="required">*</span></label>
+               <select id="vege" name="vege" required>
+                <option value="0">0(means no)</option>
+                <option value="1">1(means yes)</option>
+               </select>
+
+               <label for="crop">Crop: <span class="required">*</span></label>
+               <select id="crop" name="crop" required>
+                <option value="0">0(means no)</option>
+                <option value="1">1(means yes)</option>
+               </select>
+
+               <label for="fruit">Fruit: <span class="required">*</span></label>
+               <select id="fruit" name="fruit" required>
+                   <option value="0">0(means no)</option>
+                   <option value="1">1(means yes)</option>
+               </select>
+
+               <label for="humidity">Humidity : <span class="required">*</span></label>
+               <input type="number" id="humidity" name="humidity" min="45" max="98" required>
+
+
+               <button type="submit">Get Recommendations</button>
+           </form>
+       </section>
+       <section class="recommendation-section">
+           <h2>Recommended Crops: {{ prediction_text }}</h2>
+           <ul id="recommended-crops">
+               <!-- List of recommended crops will be displayed here -->
+           </ul>
+       </section>
+   </main>
+   <footer>
+    <p>This recommender system is highly based on India's exports and imports.We have given importance to crops that india imports or exports the most these are:Tomato, Coffee, Cotton, Jute, Mango, Orange, and Rice.</p>
+</footer>
+
+   <script src="static/js/script.js"></script>
+</body>
+</html>
