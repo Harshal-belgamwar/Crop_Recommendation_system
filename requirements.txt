@@ -2,3 +2,5 @@ Flask
 gunicorn
 tensorflow
 numpy
+joblib
+flask
