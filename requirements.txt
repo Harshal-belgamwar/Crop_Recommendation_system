@@ -4,3 +4,4 @@ gunicorn
 tensorflow
 numpy
 flask
+flask-cors
