@@ -1,7 +1,7 @@
-Flask
+Flask==2.1.0  
+joblib==1.2.0 
 gunicorn
 tensorflow
 numpy
-joblib
 flask
 os
